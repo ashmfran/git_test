@@ -21,7 +21,7 @@ stop
 
 startUp()
   output "Enter your mortgage payment or 0 to quit"
-  input mortgagegPayment
+  input mortgagePayment
 return
 
   totalCost()
