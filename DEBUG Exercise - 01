@@ -10,8 +10,9 @@ start
         num average
         num PASSING = 60
     output "Enter first score or 0 to quit "
+        input firstTest
     while firstTest not equal to 0
-        output "Enter second score "
+        output "Enter second score or 0 to quit"
         input secondTest
         average = firstTest + secondTest / 2
         ouput "Average is ", average
@@ -20,7 +21,7 @@ start
         else
             output "Fail"
         endif
-        output "Enter first score or 0 to quit "
+        input firstTest
     endwhile
     
 stop
