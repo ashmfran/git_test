@@ -5,18 +5,19 @@
 start
 
     Declarations
-      num mortgagePayment = -1
+      num mortgagePayment = 0
     num utilities
     num taxes
     num upkeep
     num total
 
-  startUp()
-  while mortgagePayment not equal to 0
-    totalCost()
-    startUp()
-  endwhile
-  finishUp()
+    while mortgagePayment not equal to 0
+        startUp()
+        if mortgagePayment not equal to 0 then
+          totalCost()
+        endif
+      endwhile
+      finishUp()
 
 stop
 
