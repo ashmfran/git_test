@@ -5,15 +5,15 @@
 start
 
     Declarations
-      num mortgagePayment
+      num mortgagePayment = -1
     num utilities
     num taxes
     num upkeep
     num total
 
-  startup()
+  startUp()
   while mortgagePayment not equal to 0
-    MainLoop()
+    totalCost()
   endwhile
   finishUp()
 
@@ -21,10 +21,10 @@ stop
 
 startUp()
   output "Enter your mortgage payment or 0 to quit"
-  input mtgPayment
+  input mortgagegPayment
 return
 
-  mainLoop()
+  totalCost()
     output "Enter utilities"
     input utilities
     output "Enter taxes"
@@ -35,6 +35,7 @@ return
     output "Total is ", total
   return
 
-    finishUp()
-output "End of program"
+finishUp()
+    output "End of program"
+
 return
