@@ -5,11 +5,11 @@
 start
 
     Declarations
-      num mortgagePayment = 0
-    num utilities
-    num taxes
-    num upkeep
-    num total
+        num mortgagePayment = 0
+        num utilities
+        num taxes
+        num upkeep
+        num total
 
     while mortgagePayment not equal to 0
         startUp()
