@@ -1,0 +1,48 @@
+start
+
+    SET baseFee = 5
+    SET taxRate = 0.14
+    SET additionalFee = 0
+    SET taxAmount = 0
+    SET totalBill = 0
+
+    FUNCTION calculateBill(textMessages)
+        IF textMessages <= 100 THEN
+          additionalFee = 0
+        ELSEIF textMessages > 100 AND textMessages <= 300 THEN
+          additionalFee = (textMessages - 100) * 0.03
+        ELSE
+          additionalFee = (200 * 0.03) + (textMessages - 300) * 0.02
+
+        totalBill = baseFee + additionalFee
+        taxAmount = totalBill * taxRate
+        totalBill = totalBill + taxAmount
+
+      RETURN totalBill, additionalFee,taxAmount
+
+    FUNCTION collectCustomerData()
+      customerData = []
+      SET sentinelValue = -1
+
+    WHILE true
+        PRINT “Enter area code (3 digits):”
+        areaCode = INPUT()
+        IF areaCode is sentinel value THEN
+            BREAK
+        PRINT “Enter phone number ( 7 digits):”
+        phoneNumber = INPUT()
+        PRINT “Enter messages count sent in a month”
+        textMessages = INPUT()
+
+      totalBill, additionalFee, taxAmount = calculateBill(textMessages)
+
+      customerData.ADD[(areaCode, phoneNumber, textMessages, totalBill, additionalFee, taxAmount)]
+
+      PRINT "Area Code:", areaCode
+      PRINT "Phone Number:", phoneNumber
+      PRINT "Text Messages Sent:", textMessages
+      PRINT "Total Bill:", totalBill
+      PRINT "Additional Fee:", additionalFee
+      PRINT "Tax Amount:", taxAmount
+
+end
