@@ -1,0 +1,23 @@
+"""
+
+Author: Ashley Francis
+Date written: 01/27/2025
+Assignment: Module 01 Programming Assignment Part II
+This program defines a function to calculate the total amount of a meal
+purchased at a restaurant. It will prompt the user to enter the charge
+amount for the food. It will calculate the amount by multiplying the food
+charge by 18% and the sales tax by 7%. The program will display each amount;
+the food charge, the tip, sales tax, and total amount of meal.
+"""
+
+food_charge = float(input("Enter the charge for the food: $"))
+
+tip = food_charge * 0.18
+sales_tax = food_charge * 0.07
+
+total = food_charge + tip + sales_tax
+
+print(f"Food charge: ${food_charge:.2f}")
+print(f"Tip (18%): ${tip:.2f}")
+print(f"Sales tax (7%): ${sales_tax:.2f}")
+print(f"Total amount: ${total:.2f}")
