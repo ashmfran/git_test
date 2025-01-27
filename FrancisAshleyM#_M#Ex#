@@ -1,0 +1,14 @@
+"""
+Author: Ashley Francis
+Date written: 01/27/2025
+Assignment: Module 01 Programming Assignment
+This program defines a function to convert and calculate celsius temperatures
+to fahrenheit temperatures using the formula F=9/5*C+32. It asks the user to
+input the celsius temperature. The program calculates the converted fahrenheit
+temperature. The program then displays the converted fahrenheit temperature.
+"""
+
+celsius = float(input("Enter the temperature in Celsius: "))
+
+fahrenheit = (9/5) * celsius + 32
+print(f"The temperature in Fahrenheit is: {fahrenheit}")
